@@ -1,7 +1,7 @@
 var audio = document.getElementById('bg-music');
 var playButton = document.getElementById('play-button');
 
-function toggleAudio() {
+function toggleAudioPlayback() {
     if (audio.paused) {
         audio.play();
         playButton.textContent = 'Pause';
@@ -10,3 +10,5 @@ function toggleAudio() {
         playButton.textContent = 'Play';
     }
 }
+
+playButton.addEventListener('click', toggleAudioPlayback);
