@@ -4,29 +4,59 @@ body {
     padding: 0;
     height: 100vh;
     overflow: hidden; /* Hide any overflow from the body */
+}
+
+/* Use CSS flex to center the content both horizontally and vertically */
+.container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Set the background image to cover the entire body */
+body {
+    background-color: #000; 
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden; 
 }
 
 .container {
-    position: relative; /* Position the container relatively */
-    text-align: center; /* Center text horizontally */
-    color: #fff; /* Text color */
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
 }
 
+.centered-text {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    margin: 20px; 
+    color: #fff; 
+    max-width: 80%; 
+}
+
+
 img {
-    max-width: 100%;
-    height: auto; /* Maintain image aspect ratio */
-    display: block; /* Remove any default inline spacing */
-    margin: 0 auto; /* Center image horizontally */
+   
+    width: 100vw;
+    height: auto;
 }
 
 #play-button {
-    margin-top: 20px; /* Add space between text and button */
-    padding: 5px 15px; /* Thinner button */
+    position: absolute;
+    bottom: 10px; 
+    left: 10px; 
+    padding: 10px 20px;
     background-color: #fff;
     border: none;
     cursor: pointer;
-    color: #000; /* Text color for button */
+    z-index: 1; 
 }
